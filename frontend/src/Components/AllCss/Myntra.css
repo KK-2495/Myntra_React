@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* .main {
+    height: 2000px;
+  } */
+  .navBar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 5px rgb(196, 196, 196);
+  }
+  .navBar0 img {
+    width: 53px;
+    height: 50px;
+  }
+  .navBar1 {
+    display: flex;
+    position: absolute;
+    left: 150px;
+  }
+  .navBar1 li {
+    padding-right: 25px;
+    font-size: 13px;
+    list-style: none;
+    font-weight: 500;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  .navBar1>li:nth-child(6) {
+    margin-top: -4px;
+    color: black;
+  }
+  .navBar1>a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navBar1>li:nth-child(6)>sup{
+    color: red;
+  }
+  
+  .navBar2 {
+    position: relative;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 4px;
+    margin-left: 430px;
+    width: 30%;
+    background-color: whitesmoke;
+  }
+  .navBar2 > i {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .navBar2 input {
+    border: none;
+    padding: 10px;
+    width: 300px;
+    outline: none;
+    background-color: whitesmoke;
+    padding-left: 10px;
+  }
+  .navBar3 {
+    display: flex;
+    list-style: none;
+    position: relative;
+    right: 7%;
+    font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+      align-items: center;
+  }
+  .navBarLast {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+  .navBarLast p {
+    font-weight: 600;
+    padding-top: 3px;
+    font-size: 12px;
+  }
+  .navBar3 div button {
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+  }
+  .floater {
+    display: flex;
+    color: white;
+    background-color: #535766;
+    position: fixed;
+    top: 50%;
+    right: -9%;
+    transform: rotate(-90deg);
+    width: 280px;
+    justify-content: space-around;
+  }
+  .floater>p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+  }
+  .floater>i {
+    margin-top: 10px;
+    font-size: 35px;
+  }
+  .floater1 {
+    position: fixed;
+    bottom: 14%;
+    right: 2%;
+    /* border: 2px solid red; */
+    background-color: #1d85fc;
+    padding: 20px;
+    border-radius: 50%;
+    height: 4%;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .banner {
+    margin-top: 120px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .banner > img {
+    width: 100%;
+  }
+  
+  .itemTitle {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .imageSlide {
+    width: 100%;
+    display: flex;
+  }
+  .imageSlide div {
+    /* border: 2px solid; */
+    width: 14%;
+    height: 100px;
+  }
+  .imageSlide div > img {
+    width: 100%;
+  }
+  
+  .itemTitle1 {
+    margin-top: 200px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .imageSlide1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+  }
+  .imageSlide1 div {
+      width: 12%;
+      /* height: 120px; */
+      /* border: 2px solid; */
+  }
+  .imageSlide1 div >img {
+      width: 100%;
+  }
+  .itemTitle2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 30px;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+  .imageSlide2 {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+  
+  }  
+  .imageSlide2>div {
+      /* border: 2px solid ; */
+      width: 15%;
+  }
+  .imageSlide2>div img {
+      width: 100%;
+  }
+  .itemTitle3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .imageSlide3 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f6f6f6;
+  }  
+  .imageSlide3>div {
+    /* border: 2px solid; */
+    width: 12%;
+  }
+  .imageSlide3>div>img {
+    width: 100%;
+  }
+  .imageSlide4 {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    width: 100%;
+  }  
+  .imageSlide4>div {
+    /* border: 2px solid; */
+    width: 180px;
+  }
+  .imageSlide4>div>img {
+    width: 100%;
+  }
+  .imageSlide5 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .imageSlide5>div {
+    width: 12%;
+  }
+  .imageSlide5>div>img {
+    width: 100%;
+  }
+  .imageSlide6 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+  
+  }
+  .imageSlide6>div {
+    width: 157px;
+  }
+  .imageSlide6>div>img {
+    width: 100%;
+  }
+  .imageSlide7 {
+    display: flex;
+    width: 100%;
+  }
+  .imageSlide7>div {
+    width: 25%;
+  }
+  .imageSlide7>div>img {
+    width: 100%;
+  }
+  /* ******Footer**** */
+  #footer{
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+  }
+  
+  #footer > div{
+    margin: 70px 70px;
+    /* border: 1px solid red; */
+    height: 400px;
+    display: flex;
+  }
+  
+  #footer > div > div{
+    margin: 40px 40px;
+    /* border: 1px solid red; */
+    height: 100%;
+  }
+  
+  #footer > div > div:nth-child(1) > h4{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #footer > div > div:nth-child(1) > h5{
+    font-size: 0.8em;
+    text-transform: capitalize;
+    font-weight: 200;
+    color: rgb(46,46,46);
+  }
+  
+  #footer > div > div:nth-child(1) >h5:nth-child(8){
+    margin-bottom: 20px;
+  }
+  
+  
+  #footer > div > div:nth-child(2) > h4{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #footer > div > div:nth-child(2) > h5{
+    font-size: 0.8em;
+    text-transform: capitalize;
+    font-weight: 200;
+    color: rgb(46,46,46);
+  }
+  
+  #footer > div > div:nth-child(3){
+    width: 25%;
+  }
+  
+  #footer > div > div:nth-child(3) > h4{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #footer > div > div:nth-child(3) > div{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    /* border: 1px solid blue; */
+  }
+  
+  #footer > div > div:nth-child(3) > div > img{
+    width: 60%;
+    height: 50px;
+  }
+  
+  #footer > div > div:nth-child(3) > div > i{
+    margin-right: 10px;
+    color: grey;
+  }
+  
+  #footer > div > div:nth-child(4){
+    margin-left: 50px;
+  }
+  
+  #footer > div > div:nth-child(4) > div:nth-child(1){
+    width: 53%;
+    margin-bottom: 60px;
+  }
+  
+  #footer > div > div:nth-child(4) > div:nth-child(1) > h4{
+    font-size: 0.8em;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    color: rgb(46,46,46);
+  }
+  
+  #footer > div > div:nth-child(4) > div:nth-child(1) > h4 > b{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  #footer > div > div:nth-child(4) > div:nth-child(2){
+    width: 53%;
+  }
+  
+  #footer > div > div:nth-child(4) > div:nth-child(2) > h4{
+    font-size: 0.8em;
+    color: rgb(46,46,46);
+  }
+  
+  #footer > div > div:nth-child(4) > div:nth-child(2) > h4 > b{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  
+  /* *****media Query******* */
+  @media screen and (max-width:770px) {
+    .navBar2{
+        display: none;
+    }
+    .navBar1{
+        display: none;
+    }
+  }
