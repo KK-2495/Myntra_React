@@ -14,7 +14,6 @@ root.render(
     <HandleAuthContext>
     <App />
     </HandleAuthContext>
-    
     </BrowserRouter>
   </React.StrictMode>
 );

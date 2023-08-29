@@ -1,7 +1,24 @@
-import react from "react";
+import react, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Components/AllCss/Register.css"
 
 const Register = () => {
+    const router = useNavigate();
+    const [userData, setUserData] = useState({ name: "", email:"", password:"", confirmPassword:"" });
+
+    const handleChange = (event) =>{
+        setUserData({ ...userData,[event.target.name]: event.target.value });
+    }
+
+    const handleSubmit = (event) =>{
+        event.PreventDefault();
+        if(userData.name && userData.email && userData.password && userData.confirmPassword){
+
+        }else{
+            alert("All fields are mandatory.");
+        }
+    }
+
   return (
     <>
      <div class="main">
@@ -37,16 +54,16 @@ const Register = () => {
             </div>
         </div>
         <div class="loginform">
-            <form onsubmit="register(event)">
+            <form onSubmit={handleSubmit}>
                 <div class="loginImg">
                     <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2023/2/7/9d70554f-0a7d-49f1-a063-4c32800a9bfd1675792560640-offer-banner-400-600x240-code-_-MYNTRA300.jpg" alt="" />
                 </div>
                 <div class="userinfo">
                     <h3>Sign Up</h3>
-                    <input id="userName" type="text" placeholder="User Name" />
-                    <input id="userEmail" type="email" placeholder="Enter your email" />
-                    <input id="userPassword" type="password" placeholder="Enter password"/>
-                    <input id="userConfirmPassword" type="password" placeholder="Confirm password"/>
+                    <input id="userName" name="name" type="text" placeholder="User Name" onClick={handleChange} />
+                    <input id="userEmail" name="email" type="email" placeholder="Enter your email" onClick={handleChange} />
+                    <input id="userPassword" name="password" type="password" placeholder="Enter password" onClick={handleChange} />
+                    <input id="userConfirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" onClick={handleChange} />
                     <p>By continuing, I agree to the <b>Term of Use</b>& <b>Privacy policy</b></p>
                     <input class="submit" type="submit" value="Register" />
                 </div>
