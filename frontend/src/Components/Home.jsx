@@ -1,7 +1,20 @@
-import react from "react";
+import react, { useContext } from "react";
 import "../Components/AllCss/Myntra.css";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
 
 const Home = () => {
+    const router = useNavigate();
+
+    const {state,dispatch} = useContext(AuthContext);
+
+    const logout = () => {
+        dispatch({
+            type: "Logout"
+        })
+        router("/login");
+    }
+
   return (
     <>
     <div class="main">
@@ -35,7 +48,7 @@ const Home = () => {
                 <div class="navBar3">
                     <div class="navBarLast">
                         <i class="fa-regular fa-user"></i>
-                        <p id="userSwitch">Profile</p>
+                        <p id="userSwitch"> {state?.user?.name} </p>
                     </div>
                     <div class="navBarLast">
                         <i class="fa-regular fa-heart"></i>
@@ -46,7 +59,7 @@ const Home = () => {
                         <p>Bag</p>
                     </div>
                     <div id="logout">
-                        <button onclick="window.location.href=`./Login.html`">Log In</button>
+                        <button onClick={logout}>Log Out</button>
                     </div>
                 </div>
             </div>

@@ -1,21 +1,36 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Components/AllCss/Register.css"
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const Register = () => {
     const router = useNavigate();
     const [userData, setUserData] = useState({ name: "", email:"", password:"", confirmPassword:"" });
-
+    console.log(userData,"userdata");
     const handleChange = (event) =>{
         setUserData({ ...userData,[event.target.name]: event.target.value });
     }
 
-    const handleSubmit = (event) =>{
-        event.PreventDefault();
+    const handleSubmit = async (event) =>{
+        event.preventDefault();
         if(userData.name && userData.email && userData.password && userData.confirmPassword){
-
+            if(userData.password === userData.confirmPassword){
+                try {
+                    const response = await axios.post("http://localhost:8000/api/v1/register", userData );
+                    if(response.data.success){
+                        setUserData({ name: '', email: "", password: "", confirmPassword: "" })
+                        router('/login');
+                        toast.success(response.data.message);
+                      }
+                } catch (error) {
+                    toast.error(error.response.data.message);
+                }
+            }else{
+                toast.error("Password and confirm Password does not match");
+            }
         }else{
-            alert("All fields are mandatory.");
+            toast.error("All fields are mandatory.");
         }
     }
 
@@ -60,10 +75,10 @@ const Register = () => {
                 </div>
                 <div class="userinfo">
                     <h3>Sign Up</h3>
-                    <input id="userName" name="name" type="text" placeholder="User Name" onClick={handleChange} />
-                    <input id="userEmail" name="email" type="email" placeholder="Enter your email" onClick={handleChange} />
-                    <input id="userPassword" name="password" type="password" placeholder="Enter password" onClick={handleChange} />
-                    <input id="userConfirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" onClick={handleChange} />
+                    <input id="userName" name="name" type="text" placeholder="User Name" onChange={handleChange} />
+                    <input id="userEmail" name="email" type="email" placeholder="Enter your email" onChange={handleChange} />
+                    <input id="userPassword" name="password" type="password" placeholder="Enter password" onChange={handleChange} />
+                    <input id="userConfirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" onChange={handleChange} />
                     <p>By continuing, I agree to the <b>Term of Use</b>& <b>Privacy policy</b></p>
                     <input class="submit" type="submit" value="Register" />
                 </div>
