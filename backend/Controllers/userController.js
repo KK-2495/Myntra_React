@@ -51,6 +51,7 @@ export const login = async (req,res) =>{
 export const getCurrentUser = async (req, res) => {
     try {
         const { token } = req.body;
+        console.log(token, "backend")
         if (!token) return res.status(404).json({ success: false, message: "Token not found." })
 
         const decodedData = jwt.verify(token, process.env.jwt_secret);

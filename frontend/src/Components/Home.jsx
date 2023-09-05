@@ -17,45 +17,45 @@ const Home = () => {
 
   return (
     <>
-    <div class="main">
-            <div class="floater">
+    <div className="main">
+            <div className="floater">
                 <p>FLAT ₹200 OFF</p>
-                <i class="fa-solid fa-caret-up"></i>
+                <i className="fa-solid fa-caret-up"></i>
             </div>
-            <div class="floater1">
-                <i class="fa-regular fa-bell"></i>
+            <div className="floater1">
+                <i className="fa-regular fa-bell"></i>
             </div>
-            <div class="navBar">
-                <div class="navBar0">
+            <div className="navBar">
+                <div className="navBar0">
                     <img src="https://cdn.iconscout.com/icon/free/png-256/myntra-2709168-2249158.png" alt="Myntra logo" />
                 </div>
-                <div class="navBar1">
+                <div className="navBar1">
                     <a href="/menTshirt.html">
                         <li>MEN</li>
                     </a>
                     <li>WOMEN</li>
                     <li>KIDS</li>
-                    <li>HOME & LIVING</li>
+                    <li>HOME & LIVING</li>  
                     <li>BEAUTY</li>
                     <li>STUDIO <sup>NEW</sup></li>
                 </div>
-                <div class="navBar2">
-                    <i class="fa-solid fa-magnifying-glass">
+                <div className="navBar2">
+                    <i className="fa-solid fa-magnifying-glass">
                         <input type="text" value="" placeholder="Search for products,brands and more" />
                     </i>
 
                 </div>
-                <div class="navBar3">
-                    <div class="navBarLast">
-                        <i class="fa-regular fa-user"></i>
+                <div className="navBar3">
+                    <div className="navBarLast">
+                        <i className="fa-regular fa-user"></i>
                         <p id="userSwitch"> {state?.user?.name} </p>
                     </div>
-                    <div class="navBarLast">
-                        <i class="fa-regular fa-heart"></i>
+                    <div className="navBarLast">
+                        <i className="fa-regular fa-heart"></i>
                         <p>Wishlist</p>
                     </div>
-                    <div class="navBarLast">
-                        <i class="fa-solid fa-bag-shopping"></i>
+                    <div className="navBarLast">
+                        <i className="fa-solid fa-bag-shopping"></i>
                         <p>Bag</p>
                     </div>
                     <div id="logout">
@@ -63,15 +63,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div class="banner">
+            <div className="banner">
                 <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/6107d28b-2bcb-44e6-9743-655b54550b8f1659020199598-Workwear_Desk--1-.jpg"
                     alt="img" />
             </div>
-            <div class="itemTitle">
+            <div className="itemTitle">
                 <h1>DEAL OF THE DAY
                 </h1>
             </div>
-            <div class="imageSlide">
+            <div className="imageSlide">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/44a9b614-4f67-4b5a-89e5-ee50f7d5f8681676819472882-HRX_Activewear_Min_65_off.png"
                         alt="img" />
@@ -105,11 +105,11 @@ const Home = () => {
                         alt="img" />
                 </div>
             </div>
-            <div class="itemTitle1">
+            <div className="itemTitle1">
                 <h1>BEST OF MYNTRA EXCLUSIVE BRANDS
                 </h1>
             </div>
-            <div class="imageSlide1">
+            <div className="imageSlide1">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2022/3/10/b25f89eb-fbeb-4013-829e-32ee5b5daaa01646895183668-Roadster-HRX_Unisex.jpg"
                         alt="img" />
@@ -175,11 +175,11 @@ const Home = () => {
                         alt="img" />
                 </div>
             </div>
-            <div class="itemTitle2">
+            <div className="itemTitle2">
                 <h1>TOP PICKS
                 </h1>
             </div>
-            <div class="imageSlide2">
+            <div className="imageSlide2">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/062cea23-9a6a-44b9-bdd4-87cae6a462311645602543339-Kurta-sets.jpg"
                         alt="img" />
@@ -209,11 +209,11 @@ const Home = () => {
                         alt="img" />
                 </div>
             </div>
-            <div class="itemTitle3">
+            <div className="itemTitle3">
                 <h1>CATEGORIES TO BAG
                 </h1>
             </div>
-            <div class="imageSlide3">
+            <div className="imageSlide3">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aa4658b5-d723-4652-9ea1-00456b355c3a1645602467046-Kurta-Sets.jpg"
                         alt="img" />
@@ -312,11 +312,11 @@ const Home = () => {
                 </div>
             </div>
             {/* <!-- *********************** --> */}
-            <div class="itemTitle3">
+            <div className="itemTitle3">
                 <h1>DEALS ON TOP BRANDS
                 </h1>
             </div>
-            <div class="imageSlide3">
+            <div className="imageSlide3">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/3/f0dc0024-a8d3-4aec-9e1b-d9b6873b52d51599144996663-Crocs.jpg"
                         alt="img" />
@@ -414,11 +414,11 @@ const Home = () => {
                         alt="" />
                 </div>
             </div>
-            <div class="itemTitle3">
+            <div className="itemTitle3">
                 <h1>BRANDS AT SLASHED PRICES
                 </h1>
             </div>
-            <div class="imageSlide4">
+            <div className="imageSlide4">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/8cd7ec33-78fe-4b40-802d-365238b1376e1644475927229-Sangria.jpg"
                         alt="" />
@@ -476,11 +476,11 @@ const Home = () => {
                         alt="" />
                 </div>
             </div>
-            <div class="itemTitle3">
+            <div className="itemTitle3">
                 <h1>BEST BUYS
                 </h1>
             </div>
-            <div class="imageSlide5">
+            <div className="imageSlide5">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/420ebd43-1270-4954-bad6-e9e50b52384d1645602339422-Heels.jpg"
                         alt="" />
@@ -547,11 +547,11 @@ const Home = () => {
                 </div>
             </div>
 
-            <div class="itemTitle3">
+            <div className="itemTitle3">
                 <h1>MYNTRA LUXE
                 </h1>
             </div>
-            <div class="imageSlide6">
+            <div className="imageSlide6">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/8c07792e-bbf9-4935-8d9c-3a6a66eba4f01636726166240-HP-DKNY.jpg"
                         alt="" />
@@ -617,11 +617,11 @@ const Home = () => {
                         alt="" />
                 </div>
             </div>
-            <div class="itemTitle3">
+            <div className="itemTitle3">
                 <h1>GIFTING CARDS
                 </h1>
             </div>
-            <div class="imageSlide7">
+            <div className="imageSlide7">
                 <div>
                     <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/8/22/22b3c59a-fa16-434d-b2e1-d8779f1abe871661164884892-Gift-Card-Banner.png"
                         alt="" />
@@ -688,10 +688,10 @@ const Home = () => {
                         </div>
                         <h4>Keep in Touch</h4>
                         <div>
-                            <i class="fa-brands fa-square-facebook fa-2x"></i>
-                            <i class="fa-brands fa-square-twitter fa-2x"></i>
-                            <i class="fa-brands fa-youtube fa-2x"></i>
-                            <i class="fa-brands fa-square-instagram fa-2x"></i>
+                            <i className="fa-brands fa-square-facebook fa-2x"></i>
+                            <i className="fa-brands fa-square-twitter fa-2x"></i>
+                            <i className="fa-brands fa-youtube fa-2x"></i>
+                            <i className="fa-brands fa-square-instagram fa-2x"></i>
                         </div>
                     </div>
 
