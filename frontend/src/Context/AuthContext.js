@@ -33,7 +33,7 @@ const HandleAuthContext = ({children})=>{
                 console.log(response)
                 if(response.data.success){
                     dispatch({
-                        type: "LOGIN",
+                        type: "Login",
                         payload: response.data.user
                     })
                 }

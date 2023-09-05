@@ -46,3 +46,27 @@ export const login = async (req,res) =>{
         return res.status(500).json({success:false, message:"Server error"})
     }
 }
+
+
+export const getCurrentUser = async (req, res) => {
+    try {
+        const { token } = req.body;
+        if (!token) return res.status(404).json({ success: false, message: "Token not found." })
+
+        const decodedData = jwt.verify(token, process.env.jwt_secret);
+
+        if (!decodedData) return res.status(404).json({ success: false, message: "Token is not valid." })
+
+        const userId = decodedData.userId;
+
+        const user = await User.findById(userId);
+        if (user) {
+            return res.status(200).json({ success: true, user: user })
+        }
+        return res.status(404).json({ success: false, message: "User not found." })
+
+
+    } catch (error) {
+        return res.status(500).json({ success: false, message: error })
+    }
+}
