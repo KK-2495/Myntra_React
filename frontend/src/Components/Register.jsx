@@ -36,7 +36,7 @@ const Register = () => {
 
   return (
     <>
-     <div <>><>Name="main">
+     <div className="main">
         <div className="navBar">
             <div className="navBar0">
                 <img src="https://cdn.iconscout.com/icon/free/png-256/myntra-2709168-2249158.png" alt="Myntra logo" />
